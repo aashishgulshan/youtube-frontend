@@ -1,11 +1,10 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
-import BottomNavigation from "./components/BottomNavigation";
+
+import Layout from "./components/Layout";
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <BottomNavigation></BottomNavigation>
+    <Layout></Layout>
     </>
   );
 }
