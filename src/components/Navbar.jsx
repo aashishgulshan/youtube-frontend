@@ -1,11 +1,12 @@
-// import { FaMicrophone } from "react-icons/fa6";
+import { FaMicrophone } from "react-icons/fa6";
 import InputComponent from "./InputComponent";
+import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div className="navbar bg-base-100 border-b">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+          <div role="button" className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -20,32 +21,21 @@ export default function Navbar() {
               ></path>
             </svg>
           </div>
-          <a className="btn btn-ghost font-bold text-md md:text-xl text-red-600">
-            YouTube
-          </a>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          <Link
+            to="/"
+            className="btn btn-ghost font-bold text-md md:text-xl text-red-600"
           >
-            <li>
-              <a>Homepage</a>
-            </li>
-            <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>About</a>
-            </li>
-          </ul>
+            YouTube
+          </Link>
         </div>
       </div>
 
       <InputComponent></InputComponent>
-      {/* <div className="navbar-center border mx-2 rounded-xl">
-        <button className="btn btn-ghost btn-circle">
+      <div className="navbar-center mx-2 md:block hidden">
+        <button className="btn btn-ghost join-item border-r">
           <FaMicrophone />
         </button>
-      </div> */}
+      </div>
 
       <div className="navbar-end">
         <button className=" md:hidden btn btn-ghost btn-circle">
